@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call >>>>>>>>>>>>>>
+      
+        const person = {
+          fName: "Durgesh",
+          lName: "Kadam"
+        };
+
+        function greet (greet,punctuation){
+            console.log(`${greet},${this.fName}${this.lName}${punctuation}`);
+
+        }
+        
+       greet.call(person,"hello","!")
+
+       //apply>>>>>>>>>
+
+        greet.apply(person,['hi','!'])
+
+        //Bind>>>>>>>>>
+        const boundGreet = greet.bind(person,'hey','!');
+        boundGreet();
+    </script>
+</body>
+</html>

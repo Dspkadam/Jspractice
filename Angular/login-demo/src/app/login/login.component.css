@@ -1,0 +1,115 @@
+/* Global styles for the application */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: blueviolet; /* Gradient background */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:#ece6d3; /* Slightly transparent white background */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align children horizontally */
+}
+
+/* Hover effect for the container */
+.login-container:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Shadow deepens */
+}
+
+/* Title styling */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px; /* Increased font size */
+  text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+/* Form field styling */
+div {
+  margin-bottom: 15px;
+  width: 100%; /* Ensure full width for input fields */
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%; /* Full width of the parent div */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+/* Input field focus effect */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  width: 50%; /* Full width of the parent div */
+  padding: 12px;
+  margin-left: 50px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0056b3;
+}
+
+.signup{
+margin-left: 250px;
+margin-top: 35px;
+}
+
+/* Disabled button styling */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .login-container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}

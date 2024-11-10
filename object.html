@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var obj  = {
+           stud_name: "Nitin", 
+            stud_roll: 101, 
+            stud_marks: "90%", 
+          isTalented: "Average" 
+        }
+         console.log(obj.stud_marks);
+
+         const obj1 = new Object();
+         obj1.name = "Durgesh"
+         obj1.marks= 100
+         console.log('old',obj1.marks);
+         obj1.marks = 150
+         console.log('new' ,obj1.marks);
+         delete obj1.marks
+         console.log('new' ,obj1.marks);
+
+
+
+
+         var obj2 = [
+            { stud_name: "Nitin", stud_roll: 101, stud_marks: "90%", isTalented: "Average" },
+            { stud_name: "Komal", stud_roll: 102, stud_marks: "80%", isTalented: "Low" },
+            { stud_name: "Sayali", stud_roll: 103, stud_marks: "100%", isTalented: "High" },
+            { stud_name: "Diksha", stud_roll: 104, stud_marks: "95%", isTalented: "High" },
+        ];
+
+         for (let index = 0; index < obj2.length; index++) {
+            if(obj2[index].isTalented === "High")
+            console.log((obj2[index].stud_name))          
+         }
+    </script>
+</body>
+</html>

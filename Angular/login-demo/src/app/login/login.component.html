@@ -1,0 +1,18 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" required [(ngModel)]="username" name="username">
+      </div>
+      <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" required [(ngModel)]="password" name="password">
+      </div>
+      <button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+  </form>
+  <div class="signup"> <!-- Added margin-top for spacing -->
+      Not a Member? <a href="/signup" class="text-blue-500 hover:underline">Sign Up</a>
+  </div>
+</div>
+  

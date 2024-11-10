@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function  outerFunc() {
+         let outVar = 'HI I am  outer function';
+          
+          function innerFunc(){
+         console.log(outVar);
+          }
+ 
+           return innerFunc;
+
+        }
+
+        const  inner = outerFunc();
+        inner();
+
+
+    // ==============================>>>>>>>>>>>>>>
+
+    function createCount(){
+        let  count = 0;
+
+
+        return{
+            increment : function(){
+                count++;
+                return count;
+            },
+            
+            decrement : function(){
+                count --;
+                return count;
+            },
+        
+            getcount : function(){
+                return count;
+            }
+        };
+
+    }
+    
+    const counter =createCount();
+    console.log(counter.increment());
+    console.log(counter.increment());
+    console.log(counter.decrement());
+    console.log (counter.getcount());
+
+
+
+    //====================............>>>>>>>>>
+
+    let b = 10;
+     function outerFunccc(){
+        let a = 20;
+        
+        return function innerFunccc(){
+            let c = 30;
+            
+            console.log(c);
+            console.log(b);
+            console.log(a);
+        
+        }
+     }
+     console.log(outerFunccc());
+
+    </script>
+</body>
+</html>
