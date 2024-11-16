@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops</title>
+</head>
+<body>
+    <script>
+       //class and function>>>>>>>>>>>>>>>>>>>ex
+        // class person {
+        //     constructor(name ,age) {
+        //         this.name = name;
+        //         this.age = age ;
+        //     }
+        
+        //     greet(){
+        //         console.log(`hello my name is ${this.name} and my age is ${this .age}!`);
+        //     }
+
+        //     greetBirthday(){
+        //         this.age++;
+        //         console.log(`Happy Birthday to you ${this.name} and now i am ${this.age} old !`)
+        //     }
+        // };
+
+        // let newName = new person ("Durgesh" ,25 );
+
+        // newName.greet();
+        // newName.greetBirthday();
+       
+
+        //prototype ex>>>>>>>>>>>>>>>>>>>
+
+        // class animal {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+
+        //     speak(){
+        //         console.log(`${this.name} makes a sound`)
+        //     };
+        
+        // }
+        
+        // animal.prototype.eat = function (){
+        //  console.log(`${this.name} is eating`)
+        // }
+
+        // let mau = new animal('lion');
+        
+        // mau.speak();
+        // mau.eat();
+
+        // var mau2 = new animal('tiger');
+
+        // mau2.speak();
+        // mau2.eat();
+
+
+        //>>>>>>>>>>>>>>>>>>>>>>> inheritance >>>>>>ex
+      
+        class animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak2(){
+                console.log(`${this.name} makes a sound`)
+            };
+
+        }
+        
+        class Dog extends animal {
+            constructor(name,breed) {
+                super(name);
+                this.breed=breed;
+            }
+
+            speak(){
+                console.log(`${this.name} barks`)
+            }
+        }
+
+        let mau = new Dog('lion');
+        mau.speak();
+        mau.speak2();
+    </script>
+</body>
+</html>
